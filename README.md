@@ -1,2 +1,2 @@
 # dravin7.github-io
-Trying to make a proxy website like proxyorb and proxypal
+This my website where I will shocase all my work. Please enjoy!
