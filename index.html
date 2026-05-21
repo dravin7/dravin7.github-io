@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Dravin7</title>
-    <link rel="stylesheet" href="stylesheet1.css">
-</head>
-<body>
-
-    <h1>Dravin7's projects</h1>
-    <p>In this website I will showcase all of my projects. if you have any suggestions please contact me at dravinpati2025@gmail.com</p>
+  <head> 
+    <title> Library Catalog Showcase</title>
     
-
-</body>
+    <style> 
+  body {
+    font-family: Arial, Sans-Serif;
+    background-color: skyblue;
+    margin: 20px;
+  }
+    
+    header {
+      background-color:  #FFD700;
+      text-align: center;
+      padding: 10px;
+      border-radius : 5px ;
+      
+    }
+   .book h2{
+      text-align: center;
+       padding: 10px;
+      border-radius : 5px ;
+      color:#008000;
+   }
+      
+     #toggleBtn {
+    background-color: #4CAF50;
+    color: #0d0000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+     }
+     
+     
+     main{
+       max-width :800px;
+       margin: 20px auto;
+       display :flex;
+       gap :20px;
+       flex-wrap:wrap;
+     }
+     
+     .book{
+       background-color :#fff;
+       border:2px solid #FFD700;
+       border-radius: 5px ;
+       padding: 10px;
+       text-align: center;
+       
+     }
+     
+     .book img {
+       width:100px;
+       height:150px ;
+       object-fit: cover;
+     }
+    </style>
+  </head>
+  
+  <body>
+       <!-- Main Activity: Create header with title and toggle button -->
+    <header>
+        <h1>My Library Catalog</h1>
+        <button id="toggleBtn"> Hide Books </button>
+    </header>
+    
+     <main id="bookList"> 
+       <section class="book"> 
+          <h2>Dune</h2>
+          <p>Frank Herbert's sci-fi epic.</p>
+          <img src="https://m.media-amazon.com/images/I/41rrXYM-wHL._SL500_.jpg" alt="Dune Book Cover">
+       </section >
+       
+     <section class = "book">
+       <h2>1984</h2>
+       <p>george orwell's dystopian tale.</p>
+       <img src =  "https://i.etsystatic.com/17937725/r/il/7df2de/6117642888/il_fullxfull.6117642888_abca.jpg" alt= "1984 book cover">
+     </section>
+     
+     <section class = "book">
+       <h2>Because of Winn-Dixie</h2>
+       <p>Ten-year-old India Opal Buloni describes her first summer in the town of Naomi, Florida, and all the good things that happen to her because of her big ugly dog Winn-Dixie.</p>
+       <img src =  "https://secure.syndetics.com/index.aspx?isbn=1536214353/lc.gif&client=nyplvega&type=unbound&nicaption=Because+of+Winn-Dixie%1FDiCamillo%2C+Kate.%1FBook" alt= " book cover">
+     </section>
+       
+      <section class = "book">
+       <h2>Diary of a wimpy kid : Greg Heffley's journal</h2>
+       <p>Greg records his sixth grade experiences in a middle school </p>
+       <img src =  "https://secure.syndetics.com/index.aspx?isbn=0810993139/lc.gif&client=nyplvega&type=unbound&nicaption=Diary+of+a+wimpy+kid+%3A+Greg+Heffley%27s+journal%1FKinney%2C+Jeff.%1FBook" alt = "book cover">
+      </section>
+        
+      <section class = "book">
+       <h2>The lion, the witch and the wardrobe</h2>
+       <p>Four English school children find their way through the back of a wardrobe into the magic land of Narnia and assist Aslan, the golden lion, to triumph over the White Witch who has cursed the land with eternal winter. </p>
+       <img src= "https://secure.syndetics.com/index.aspx?isbn=9780061715051/lc.gif&client=nyplvega&type=unbound&nicaption=The+lion%2C+the+witch+and+the+wardrobe%1FLewis%2C+C.+S.+%28Clive+Staples%29%2C+1898-1963.%1FBook"alt = "book cover">
+       </section>
+     </main>
+    
+    
+    
+  </body>
+  
 </html>
