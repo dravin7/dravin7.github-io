@@ -3,26 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pong Multiplayer</title>
+    <title>Pong Game</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #username {
+            padding: 10px 15px;
+            border: 2px solid #00d4ff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        #username:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        #username::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        #startBtn {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
+
+        #startBtn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+
+        #startBtn:active {
+            transform: scale(0.98);
+        }
+
         canvas {
             background: #000;
             display: block;
-            margin: auto;
+            margin: 20px auto;
+            border: 3px solid #00d4ff;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
-        body {
-            text-align: center;
-            color: white;
+
+        #gameInfo {
+            display: none;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #00d4ff;
+        }
+
+        .controls {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .controls p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Pong Multiplayer</h1>
-    <input type="text" id="username" placeholder="Enter your username" />
-    <button id="startBtn">Start Game</button>
-    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <div class="container">
+        <h1>🎮 Pong Game</h1>
+        
+        <div class="input-section">
+            <input type="text" id="username" placeholder="Enter your username" />
+            <button id="startBtn">Start Game</button>
+        </div>
 
-    
-    
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+        <div id="gameInfo">
+            <p>Game Started! Use ↑ and ↓ arrow keys to move your paddle</p>
+        </div>
+
+        <div class="controls">
+            <p>⬆️ Arrow Up - Move Paddle Up</p>
+            <p>⬇️ Arrow Down - Move Paddle Down</p>
+            <p>First to score wins!</p>
+        </div>
+    </div>
+
+    <script src="Pong.js"></script>
 </body>
 </html>
