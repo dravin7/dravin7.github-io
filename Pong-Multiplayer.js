@@ -8,6 +8,7 @@ const PADDLE_WIDTH = 10;
 const BALL_RADIUS = 10;
 const PADDLE_SPEED = 10;
 const INITIAL_BALL_SPEED = 5;
+const AI_SPEED = 3.5; // Reduced AI speed for better gameplay
 
 // Game Mode
 let gameMode = 'ai'; // 'ai' or 'multiplayer'
@@ -164,15 +165,16 @@ function updatePlayer1() {
     }
 }
 
-// Simple AI for player 2
+// Simple AI for player 2 with reduced speed
 function updatePlayer2AI() {
     const paddleCenter = player2.y + PADDLE_HEIGHT / 2;
     const ballCenter = ball.y;
     
-    if (ballCenter < paddleCenter - 10 && player2.y > 0) {
-        player2.y -= PADDLE_SPEED * 0.7;
-    } else if (ballCenter > paddleCenter + 10 && player2.y < canvas.height - PADDLE_HEIGHT) {
-        player2.y += PADDLE_SPEED * 0.7;
+    // Reduced AI speed - only moves if ball is further away
+    if (ballCenter < paddleCenter - 15 && player2.y > 0) {
+        player2.y -= AI_SPEED;
+    } else if (ballCenter > paddleCenter + 15 && player2.y < canvas.height - PADDLE_HEIGHT) {
+        player2.y += AI_SPEED;
     }
 }
 
